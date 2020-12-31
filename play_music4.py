@@ -77,7 +77,7 @@ if web:
     @app.route('/')
     def show_entries():
         general_Data = {
-        'title' : 'Garyware v0.22'}
+        'title' : 'Yournamehereware v0.01'}
         stream_entries = return_dict(DATABASE)
         return render_template('main4_bootstrap.html', entries = stream_entries, **general_Data)
 
@@ -88,14 +88,14 @@ if web:
         return redirect ('/')
 
 
-    # We do stop the music...
+    # To stop the music...
     @app.route('/stop')
     def stop_music():
         run_cmd('mpc stop')
         return redirect('/')
 
     # Play a stream from the id provided in the html string. 
-    # We use mpc as actual program to handle the mp3 streams.
+    # use mpc as actual program to handle the mp3 streams.
     @app.route('/<int:stream_id>')
     def mpc_play(stream_id):
         db_connection = lite.connect(DATABASE)
