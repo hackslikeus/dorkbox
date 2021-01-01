@@ -4,7 +4,7 @@
     no this is only scoped to play internet radio stations using mpd 
     
 2). Who is your intended Audience?
-    this is intended to be an educational starting block, but can be easilly configured for those that are visually impaired or have difficulty using complex and/or confusing audio applications. 
+    this is intended to be an educational starting block, but can be easilly configured for those that are visually impaired or have difficulty using complex and/or confusing audio applications. - OK, you caught me in a lie, I need version control so I threw it up here so I have a backup.
     
 3). How can I customize?
     to alter the list of radio stations, you will need the station url, a name for the station, and a brief description of the station. In the python program, you can see the listing of where these will go, numbered 1 -10.
