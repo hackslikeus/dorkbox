@@ -1,8 +1,8 @@
 0.
 
 1). Will this play locally stored music on my drive?
-
     no this is only scoped to play internet radio stations using mpd 
+    
 2). Who is your intended Audience?
     this is intended to be an educational starting block, but can be easilly configured for those that are visually impaired or have difficulty using complex and/or confusing audio applications. 
     
