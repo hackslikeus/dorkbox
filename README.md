@@ -1,4 +1,5 @@
 # dorkbox
+![Screenshot_2021-01](https://user-images.githubusercontent.com/16979775/104128940-eb3ace00-532f-11eb-957d-15982f51b817.png)
 yet another internet radio mpd client.  It only consists of one python file and one html file on purpose.
 
 MPD client solely focused on internet radio stations.  For now, stations are stored inside the Python file, called into the html page using sql lite. Most folks will want to edit  to their liking which are very easy to locate inside the python file, with no further instructions needed.  Need to bring to Tiny DB and keep json file outside python (todo).
