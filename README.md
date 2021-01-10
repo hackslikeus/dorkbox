@@ -2,7 +2,7 @@
 ![Screenshot_2021-01a](https://user-images.githubusercontent.com/16979775/104129177-399c9c80-5331-11eb-8f90-57e8cf368a43.png)
 yet another internet radio mpd client.  It only consists of one python file and one html file on purpose.
 
-MPD client solely focused on internet radio stations.  For now, stations are stored inside the Python file, called into the html page using sql lite. Most folks will want to edit  to their liking which are very easy to locate inside the python file, with no further instructions needed.  Need to bring to Tiny DB and keep json file outside python (todo).
+MPD client solely focused on internet radio stations.  Stations are listed in a csv file, imported by python progrm without pandas. Most folks will want to edit this list to their liking- with no further instructions needed.  
 
 Tornado webserver will listen on port 8080 unless you set web = false, then port 5000 will be used for dev.
 
