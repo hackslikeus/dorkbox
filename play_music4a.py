@@ -54,7 +54,7 @@ if web:
     def show_entries():
         general_Data = {
         'title' : 'YourNameHereware v1.0'}
- #       stream_entries = return_dict(DATABASE)
+ #       stream_entries = return_dict(DATABASE) -deprecated
         return render_template('index.html', **general_Data)
     
 
@@ -92,14 +92,9 @@ if web:
 # Shutdown the computer now on navbar
     @app.route('/shutdown')
     def shutdown_now():
-        run_cmd('sudo halt')
+        run_cmd('sudo shutdown -h now')
         return 'Adios!'
 
-    # To gracefully shutdown the web application -not needed
-    @app.route('/shutdown_server', methods=['POST', 'GET'])
-    def shutdown():
-        IOLoop.instance().stop()
-        return 'Shutting down the server.\nSee you soon :)'
 
      #Adjust Volume up is working
     @app.route('/volumeu')
@@ -108,9 +103,9 @@ if web:
         return redirect ('/')
 
 # Here comes the main call.
-# See how simple it is to launch a Tornado server with HTTPServer.
+# Use Tornado from ths point
 if __name__ == "__main__":
-    #create_whole_db(DATABASE)
+    #use below for non web test comment out for prod
     #app.run()
     if web:
         http_server = HTTPServer(WSGIContainer(app))
