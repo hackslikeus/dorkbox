@@ -1,6 +1,6 @@
 # dorkbox
 ![Screenshot_2021-01a](https://user-images.githubusercontent.com/16979775/104129177-399c9c80-5331-11eb-8f90-57e8cf368a43.png)
-yet another internet radio mpd client.  It only consists of one python file and one html file on purpose.
+yet another internet radio mpd client.  It only consists of one python file and one html file, and a csv file on purpose.
 
 MPD client solely focused on internet radio stations.  Stations are listed in a csv file, imported by python progrm without pandas. Most folks will want to edit this list to their liking- with no further instructions needed.  
 
