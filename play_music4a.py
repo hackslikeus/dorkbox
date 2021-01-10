@@ -53,7 +53,7 @@ if web:
     @app.route('/')
     def show_entries():
         general_Data = {
-        'title' : 'Garyware v1.0'}
+        'title' : 'YourNameHereware v1.0'}
  #       stream_entries = return_dict(DATABASE)
         return render_template('index.html', **general_Data)
     
