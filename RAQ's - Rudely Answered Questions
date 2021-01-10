@@ -7,7 +7,7 @@
     this is intended to be an educational starting block, but can be easilly configured for those that are visually impaired or have difficulty using complex and/or confusing audio applications. - OK, you caught me in a lie, I need version control so I threw it up here so I have a backup.
     
 3). How can I customize?
-    to alter the list of radio stations, you will need the station url, a name for the station, and a brief description of the station. In the python program, you can see the listing of where these will go, numbered 1 -10.
+    to alter the list of radio stations, you will need the station url, a name for the station, and a brief description of the station. The stations are stored in a .csv file and will need a unique key index.
     
 4). Do I need 10 stations?
     no, but I figured after 10 you should see a pattern. Many users will only want a few, and that is fine, and will keep the scrolling to a minimum which is nice. 
@@ -25,7 +25,7 @@
     not really, but if you have any python or web design skills, this should be a fun project to take on. As you can see, there's lots of room for improvement.
     
 9). How do i get this thing going? - I just want to listen to music.
-    You will need a pi. Installed on the pi: MPD, MPC, Tornado, and Flask, and SQL lite. PIP and Python will help. Download the python program and the templates folder containing the html file. Simply run the python program from the command line, and open a web browser and point it to port 8080 at the pi's ip address. Ctrl-C will stop the python program but the music should continue until killall mpd is entered on the command line.
+    You will need a pi. Installed on the pi: MPD, MPC, Tornado, and Flask. PIP and Python will help. Download the python program and the templates folder containing the html file. Simply run the python program from the command line, and open a web browser and point it to port 8080 at the pi's ip address. Ctrl-C will stop the python program but the music should continue until killall mpd is entered on the command line.
         
 10). Where can I go to learn more about customizing the web page?
     I self trained mostly using W3 schools, they have an excellent tutorial on bootstrap to get you started. 
