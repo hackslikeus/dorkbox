@@ -95,7 +95,14 @@ if web:
         run_cmd('sudo shutdown -h now')
         return 'Adios!'
 
+# Reboot the computer now on navbar
+    @app.route('/reboot')
+    def reboot():
+        IOLoop instance().stop()
+        run_cmd('sudo reboot now')
+        return 'Use browser back button after one minute. \n See you soon:)'
 
+    
      #Adjust Volume up is working
     @app.route('/volumeu')
     def volumeu():
