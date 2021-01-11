@@ -90,15 +90,15 @@ if web:
             return redirect('/')
         
 # Shutdown the computer now on navbar
-    @app.route('/shutdown')
+    @app.route('/shutdown', methods=['POST', 'GET']))
     def shutdown_now():
         run_cmd('sudo shutdown -h now')
         return 'Adios!'
 
 # Reboot the computer now on navbar
-    @app.route('/reboot')
+    @app.route('/reboot', methods=['POST', 'GET']))
     def reboot():
-        IOLoop instance().stop()
+        #IOLoop instance().stop()
         run_cmd('sudo reboot now')
         return 'Use browser back button after one minute. \n See you soon:)'
 
