@@ -87,7 +87,7 @@ if web:
             print (url)
             run_cmd('mpc play')
             general_Data = {
-            'title' : 'Garyware v0.51'}
+            'title' : 'Yournamehereware v1.0'}
             station = (splitz[1])
             logo = (splitz[4])
             return render_template('index.html', station=station, logo=logo, **general_Data)
