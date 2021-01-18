@@ -52,7 +52,7 @@ if web:
 #    @app.route('/')
 #    def show_entries():
 #        general_Data = {
-#        'title' : 'Garyware v0.50'}
+#        'title' : 'yournamehereware v0.50'}
 #        station = (splitz[1])
 #        return render_template('index.html', station=station, **general_Data)
 
