@@ -2,7 +2,7 @@
 ![Screenshot_2021-01a](https://user-images.githubusercontent.com/16979775/104129177-399c9c80-5331-11eb-8f90-57e8cf368a43.png)
 yet another internet radio mpd client.  A simple project consisting of one python file, one html file and a csv template for stations and their urls.
 
-With a raspberry pi zero w as the target server, this low power MPD client is solely focused on internet radio.  Stations are listed in a csv file, imported by python program and displayed as a playlist on a intuitive web page. With simplicity in mind, the goal of this project is to go from startup to music in as little clicks as possible. Most folks will want to edit the list of stations to their liking- with no further instructions needed.  Since the code is mainly python, any pi or SBC should be able to run this application.
+With a raspberry pi zero w as the target server, this low power MPD client is solely focused on internet radio.  Stations are listed in a csv file, imported by python program and displayed as a playlist on a intuitive web page. With simplicity in mind, the goal of this project is to go from startup to music in as little clicks as possible. Most folks will want to edit the list of stations to their liking- with no further instructions needed.  Since the code is mainly python, any pi or SBC should be able to run this application.  Ideally, the python program could be run at boot, and as a background service using systemd, rc.local etc.
 
 Tornado webserver will listen on port 8080 unless you set web = false, then port 5000 will be used for dev.
 
