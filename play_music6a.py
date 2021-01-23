@@ -15,7 +15,7 @@ from tornado.ioloop import IOLoop
 web = True
 
 #keep below:
-#location of the csv file in same folder otherwise direct
+#location of the csv file in same folder otherwise direct -use full path if using systemd as a startup service
 filename = "/home/pi/dorkbox/stations.csv"
 
 # Initialize Flask.
