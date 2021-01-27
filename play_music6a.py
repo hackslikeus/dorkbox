@@ -1,4 +1,4 @@
-# Ingredients: Flask, SQLite and some system functions
+# Ingredients: Flask, Tornado and some system functions
 from flask import Flask, g, render_template, redirect, request
 import csv
 import sys, os
@@ -15,7 +15,7 @@ from tornado.ioloop import IOLoop
 web = True
 
 #keep below:
-#location of the csv file in same folder otherwise direct -use full path if using systemd as a startup service
+#location of the csv file in same folder otherwise direct
 filename = "/home/pi/dorkbox/stations.csv"
 
 # Initialize Flask.
@@ -51,7 +51,7 @@ if web:
         return output
 
 
-    #Adjust Volume Down - is now working
+    #Adjust Volume Down - is now working with Alsa
     @app.route('/volumed')
     def volumed():
         run_cmd('mpc volume -10')
@@ -82,7 +82,7 @@ if web:
             run_cmd('mpc play')
             sleep(1)
             general_Data = {
-            'title' : 'Garyware v0.51'}
+            'title' : 'Un-A-Ware v1'}
             station = (splitz[1])
             logo = (splitz[4])
             #artist =os.popen('mpc -f %artist%').readline()
@@ -90,7 +90,7 @@ if web:
             return render_template('index.html', station=station, logo=logo, song=song, **general_Data)
     print("proceed to your servers ip address at port 8080 using a web browser") #alert user program is running
 
-
+#Not sure if the below is needed, was working on LCD screen, will leave as it is harmless
     def loop():
         while True:
             song = os.popen('mpc -f %title%').readline()
@@ -112,13 +112,13 @@ if web:
         run_cmd('sudo reboot now')
         return 'rebooting the server.  Use your browsers back button to retun. \nSee you soon :)'
 
-    # To gracefully shutdown the web application -not needed
+# To gracefully shutdown the web application -not needed
     @app.route('/shutdown_server', methods=['POST', 'GET'])
     def shutdown():
         IOLoop.instance().stop()
         return 'Shutting down the server.\nSee you soon :)'
 
-     #Adjust Volume up is working
+#Adjust Volume up is working with Alsa
     @app.route('/volumeu')
     def volumeu():
         run_cmd('mpc volume +10')
