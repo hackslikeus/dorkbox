@@ -8,11 +8,11 @@ Tornado webserver will listen on port 8080 unless you set web = false, then port
 
 Bootstrap4 and Jumbotron will offer areas for customization and gussey-it-up potential.  I experimented with a few background images for the jumbotron with mixed results; YMMV.  -  Speaking of images, The purple box pattern in the screenshot is actually a geopattern svg of the word "Dorkbox Radio". 
 
-Instructions for pi users:  Download python file, bootstrap.html, and stations.csv files.  Create a folder on the server pi, ie. "dorkbox",  with a subdirectory for templates, (a flask thing) where the index.html bootstrap file should reside. The csv file will reside in the same folder as the python file.  Note there is a reference or two in the python file to the html page, so rename at your risk, but not a big deal.
+Instructions for pi users:  Download python file, index.html, and stations.csv files.  Create a folder on the server pi, ie. "dorkbox",  with a subdirectory for templates, (a flask thing) where the index.html bootstrap file should reside. The csv file will reside in the same folder as the python file.  Note there is a reference or two in the python file to the html page, so rename at your risk, but not a big deal.
 
-Tested on Armban, Dietpi and Raspbian os. Prerequisites include MPD, MPC, Pip3, python3, Flask, and Tornado.  Once you have all the programs loaded and the files in place, simply run the python program from the command line. A one line indicator on the command line will alert you when it is OK to navigate to the web page.
-Navigate to the serving Pi's ip address at port 8080( for example "10.0.0.112:8080") using a web browser.  Hit a play button, You will see the station logo on the web page, and with luck, music will fill your ears.  
+Must have Prerequisites include MPD, MPC, Pip3, python3, Flask, and Tornado.  Once you have all the programs loaded and the files in place, simply run the python program from the command line. A one line indicator on the command line will alert you when it is OK to navigate to the web page.
+Navigate to the serving Pi's ip address at port 8080( for example "10.0.0.112:8080") using a web browser.  Hit a play button and that should be it. Check your mpd.conf or soundcard settings if no audio eminates from your speakers.
 
-Ctrl-C will stop the python program.  Make sure /etc/mpd.conf is properly configured. 
+Ctrl-C will stop the python program.  I recommend running a systemd service to have the python program run at startup.
 
 ***Check alsa volume levels before first run as many pi's will have volume at 100% by default.  MPC commands from command line or web page will also alter volume.  I recommend  volume at 25% to start.
