@@ -112,19 +112,14 @@ if web:
         run_cmd('sudo reboot now')
         return 'rebooting the server.  Use your browsers back button to retun. \nSee you soon :)'
 
-# To gracefully shutdown the web application -not needed
-    @app.route('/shutdown_server', methods=['POST', 'GET'])
-    def shutdown():
-        IOLoop.instance().stop()
-        return 'Shutting down the server.\nSee you soon :)'
-
 #Adjust Volume up is working with Alsa
     @app.route('/volumeu')
     def volumeu():
         run_cmd('mpc volume +10')
         return redirect ('/')
     
-    # Is MPD playing a song?
+#Below for LCD display configuration or now playing panel
+# Is MPD playing a song?
 #    def mpc_status():
 #        playing = (os.popen('mpc status | grep playing')).readline()
 #        if playing=="":
