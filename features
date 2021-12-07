@@ -1,6 +1,6 @@
 Built for Raspberry pi running headless - Auto Start on boot permissable and recommended
 Very simple interface - just a list of web radio stations to play
-Scalable - the list can be endless, or accordian style format can display by genre(?)
+Scalable - the list can be endless, or page style format can display by genre(mood)
 Has Volume Control AND a Pi Shutdown button from web page
 Minimal - only has one python program, one html page, and a csv file 
 Customizable - Bootstrap design and components easilly configured
