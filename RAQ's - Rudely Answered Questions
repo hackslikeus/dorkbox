@@ -1,7 +1,7 @@
 0.
 
 1). Will this play locally stored music on my drive?
-    no this is only scoped to play internet radio stations using mpd 
+    no this is only scoped to play internet radio stations using mpd.  but if you use as an addon for RPI-Monitor, you can also bolt on Squeezelite there too.
     
 2). Who is your intended Audience?
     this is intended to be an educational starting block, but can be easilly configured for those that are visually impaired or have difficulty using complex and/or confusing audio applications. - OK, you caught me in a lie, I need version control so I threw it up here so I have a backup.
@@ -16,10 +16,10 @@
     sure, go have at it. I don't think there is a limit. 
     
 6). Is there a search feature?
-    its called google. 
+    its called google. Actually, now there is! Table Filter controls allow type search for station names and mood filters.
     
 7). And what about the name? - is that a knock on me or the developers/educators or users?
-    not at all. I came up with the name after constructing an internet radio using only a pi, a Google AIY soundcard, and a cheap lcd screen. I thought configuring the lcd screen would be difficult. 10 minutes laer, I was looking for my next project which became building a housing unit out of scrap wood. If you saw it, you would think the name is quite fitting. 
+    not at all. but if you see the creations i make to house these units, you would agree with the naming. 
     
 8). Do I need progrmming skills to run this?
     not really, but if you have any python or web design skills, this should be a fun project to take on. As you can see, there's lots of room for improvement.
@@ -37,5 +37,4 @@
     My main goal was to keep this as simple as possible. Therefore the links on the nav bar don't really serve too much of a purpose, and are mainly demonstrative, but are intended to show what can be done. 
     
  13). The "Now Playing" section on the Banner does not seem to work - is it broken?
-    it's not broken at all, however it's challenged at this present time
-
+    it has been fixed, and will alert the user the station is playing after play selection, while the table displays a funky "No records found" prompt which is misleading.
