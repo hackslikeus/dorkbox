@@ -15,7 +15,7 @@ from tornado.ioloop import IOLoop
 # Tell Flask and Tornado production site, not safe to use dev env
 web = True
 
-#keep below:
+#keep below long path for rpi-monitor addon, short for standalone:
 #location of the csv file in same folder otherwise direct
 #filename = "moodies.csv"
 filename = "/usr/share/rpimonitor/web/addons/dorkbox/moodies.csv"
@@ -124,29 +124,6 @@ if web:
     def stop_music():
         run_cmd('mpc stop')
         return redirect('/')
-
-#print out a string of crap for metadata extraction by daemon
-#def probe_file(filename):
-#    command_line = ['ffprobe', '-v', 'quiet', '-print_format', 'json', '-show_format', '-show_streams', f"url"] 
-#    p = subprocess.Popen(command_line, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-#    print(filename) # * Sanity check *
-#    out, err =  p.communicate()
-#    if len(out)>0: # ** if result okay
-#        print("==========output==========")
-#        result = json.loads(out)
-#
-#    else:
-#        result = {}
-#    if err:
-#        print("========= error ========")
-#        print(err)
-#    return result
-#
-#
-#result_json = probe_file("url")
-#print(json.dumps(result_json, indent=4))
-#json.dumps(result_json.csv, indent=4)
-
 
 
 
